@@ -2,9 +2,9 @@ package org.bondspread.domain;
 
 public class Spread {
     // no camel case to help with easy serialization
-    private String corporate_bond_id;
-    private String government_bond_id;
-    private String spread_to_benchmark;
+    private final String corporate_bond_id;
+    private final String government_bond_id;
+    private final String spread_to_benchmark;
 
     public Spread(String corporate_bond_id, String government_bond_id, String spread_to_benchmark) {
         this.corporate_bond_id = corporate_bond_id;

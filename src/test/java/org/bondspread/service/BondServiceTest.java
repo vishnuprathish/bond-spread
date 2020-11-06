@@ -33,6 +33,14 @@ public class BondServiceTest extends TestCase {
                 "Spread{corporate_bond_id='c1', government_bond_id='g1', spread_to_benchmark='30 bps'}");
     }
 
+    // rounding to bps
+    public void testCalculateSpreadRounding() throws IOException {
+        Bond corp = new Bond(String.join("", Files.readAllLines(Path.of("src/test/resource/single_r.json"))));
+        Bond govt = new Bond(String.join("", Files.readAllLines(Path.of("src/test/resource/single_r1.json"))));
+        Assert.assertEquals(BondService.calculateSpread(corp, govt).toString(),
+                "Spread{corporate_bond_id='c1', government_bond_id='g1', spread_to_benchmark='236 bps'}");
+    }
+
     // happy path
     public void testFindClosestGovtBond() throws IOException {
         BondService service = new BondService(String.join("", Files.readAllLines(Path.of("src/test/resource/input.json"))));
@@ -51,6 +59,7 @@ public class BondServiceTest extends TestCase {
                 "Bond{id='g2', type='government', tenor='10.2 years', yield='4.80%', amount_outstanding=1750000}");
     }
 
+    // happy path for complete list
     public void testCalculateSpreadForAll() throws IOException {
         BondService service = new BondService(String.join("", Files.readAllLines(Path.of("src/test/resource/input.json"))));
         Assert.assertEquals(service.calculateSpreadForAll().toString(),

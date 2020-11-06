@@ -32,7 +32,7 @@ public class App
             Files.write(Path.of(output), spread.getBytes());
             System.out.println("Wrote to out file.");
         } catch (IOException e) {
-            System.out.println("Unable to read input file");
+            System.out.println("Unable to read input file. Detail: ");
             e.printStackTrace();
         }
     }

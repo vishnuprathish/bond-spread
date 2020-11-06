@@ -44,6 +44,10 @@ public class BondService {
         return govtBonds;
     }
 
+    /**
+     * init govt bond list using treemap to do easy lookup
+     * @param bonds
+     */
     private void buildBondsLists(List<Bond> bonds) {
         bonds.forEach(bond -> {
             if(bond.isValid()) {
@@ -69,7 +73,7 @@ public class BondService {
      * Calculate spread between two bonds
      * @param privateBond
      * @param govtBond
-     * @return
+     * @return spread
      */
     public static Spread calculateSpread(Bond privateBond, Bond govtBond) {
         NumberFormat defaultFormat = NumberFormat.getPercentInstance();
@@ -85,7 +89,7 @@ public class BondService {
     /**
      * find the closest govt bond to the given bond
      * @param corpBond
-     * @return
+     * @return closest bond
      */
     public Bond findClosestGovtBond(Bond corpBond) {
         float tenor = Float.parseFloat(corpBond.getTenor().split(" ")[0]);
