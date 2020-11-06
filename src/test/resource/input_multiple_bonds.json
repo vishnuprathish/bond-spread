@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": "c1",
+      "type": "corporate",
+      "tenor": "10.3 years",
+      "yield": "5.30%",
+      "amount_outstanding": 1200000
+    },
+    {
+      "id": "g1",
+      "type": "government",
+      "tenor": "10.1 years",
+      "yield": "4.70%",
+      "amount_outstanding": 2500000
+    },
+    {
+      "id": "c2",
+      "type": "corporate",
+      "tenor": "13.5 years",
+      "yield": null,
+      "amount_outstanding": 1100000
+    },
+    {
+      "id": "g2",
+      "type": "government",
+      "tenor": "12.0 years",
+      "yield": "4.80%",
+      "amount_outstanding": 1750000
+    },
+    {
+      "id": "c3",
+      "type": "corporate",
+      "tenor": "13.5 years",
+      "yield": "1.5%",
+      "amount_outstanding": 1100000
+    },
+    {
+      "id": "g5",
+      "type": "government",
+      "tenor": "12.1 years",
+      "yield": "4.80%",
+      "amount_outstanding": 1400000
+    },
+    {
+      "id": "c4",
+      "type": "corporate",
+      "tenor": "6.5 years",
+      "yield": "1.5%",
+      "amount_outstanding": 1100000
+    },
+    {
+      "id": "g6",
+      "type": "government",
+      "tenor": "12.1 years",
+      "yield": "4.80%",
+      "amount_outstanding": 1600000
+    },
+    {
+      "id": "c5",
+      "type": "corporate",
+      "tenor": "20.5 years",
+      "yield": "1.5%",
+      "amount_outstanding": 1100000
+    }
+  ]
+}
